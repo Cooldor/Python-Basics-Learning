@@ -6,11 +6,6 @@ for i in os.walk("/Users/air/Desktop/все/ONIX/Каталог ONIX 2018 нов
     break
 
 
-
-
-
-
-
 lists = []
 
 for adress, dirs, files in os.walk("/Users/air/Desktop/все/ONIX/Каталог ONIX 2018 новый (весна)"):
