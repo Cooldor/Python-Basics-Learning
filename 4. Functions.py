@@ -7,7 +7,7 @@ def show():
 
 print("after function")
 
-
+ 
 show()
 
 print("after function")
@@ -136,7 +136,7 @@ def count_list(par, count=0):   # parameter #count
     return count
 
 
-print(count_list(j, -1))   # counting the range of list or index of last element
+print(count_list(j, -1))   # counting the range of the list or index of last element
 
 
 def count_list(par, par2=False, count=0):   # parameter

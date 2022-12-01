@@ -26,7 +26,7 @@ print(d1.items())     # return dict to Lists in tuple (for cycles "for")
 print(d1.keys)        # return keys from dicts in Lists (for cycles "for")
 print(d1.values())    # return values from dicts in Lists (for cycles "for")
 d1.update(d2)         # add all keys + values from one dict into another one
-t = d1.pop("a")       # not only deletes specific pair of key + value but also returns the value into the variable
+t = d1.pop("b")       # not only deletes specific pair of key + value but also returns the value into the variable
 print(t, d1)
 if "c" in d1:         # alternative security check of the key existence using operators
     d1["c"]
@@ -55,3 +55,39 @@ def buy():                              # shopping function for 37-th string
 
 print(users["Alex7"]["password"])
 print(buy())
+
+
+price = {"meat": 3, "bread": 1, "potato": 0.5, "water": 0.2}
+for i in price:
+    print(i)
+
+new_price = {}
+
+for i in price:
+    new_price[i] = round(price[i] * 0.85, 2)    # round to round the value for specific sign(number) after coma
+print(price)
+print(new_price)
+
+
+for i in price.items():
+    print(i)
+
+for key, value in price.items():
+    print(key)
+    print(value)
+
+new = {}                                    # reverse key to value
+for key, value in price.items():
+    new[value] = key
+print(new)
+
+
+for value in price.values():
+    print(value)
+
+
+new_price = {}
+
+for i in price.keys():                         # for better saving computer memory
+    new_price[i] = round(price[i] * 0.85, 2)
+print(new_price)

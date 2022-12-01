@@ -1,6 +1,6 @@
 import os
-CurDir = os.getcwd()
 
+CurDir = os.getcwd()
 print(CurDir)
 
 print("helpos")
@@ -9,25 +9,32 @@ print("helpos")
 cmd = "date"
 os.system(cmd)
 
-website = input()
-
-if "https://" in website:
-    os.system(website)
-    print("if")
-
-elif "www. " in website:
-    website = "https://" + website
-    os.system(website)
-
-else:
-    website = "https://www." + website
-    os.system(website)
-    print("else")
-
 
 while True:
-    x = int(input())
+    website = input("Enter your website:\n")
+    if website == "end":
+        break
 
+    if "https://" in website:
+        os.system("open " + website)
+        print("if")
+
+    elif "www. " in website:
+        website = "https://" + website
+        os.system("open " + website)
+        print("elif")
+
+    else:
+        website = "https://www." + website
+        os.system("open " + website)
+        print("else")
+
+
+# Another Factorial cycle
+while True:
+    x = int(input("Enter your number:\n"))
+    if x == -1:
+        break
     count = 0
     y = 1
 
@@ -40,6 +47,7 @@ while True:
 
 
 print("103 1224 875 / 03.11.22 ")
+print("end of program")
 
 
 

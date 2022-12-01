@@ -1,5 +1,5 @@
 print("Operators")
-
+# Booleans
 is_visible = True
 is_handy = True
 
@@ -44,22 +44,21 @@ x = 5
 
 if x == 0:
     x += 1
-print(5/x)
+print(5 / x)
 
 x = -5
 
 if x == -5:
     x += 1
-print(5/x)
+print(5 / x)
 
 x = 0
 
 if x == 0:
     x += 1
-print(5/x)
+print(5 / x)
 
 ...
-
 
 x = 0
 
@@ -67,15 +66,14 @@ if x == 0:
     x = 1
     print("x was equal to 0")
 
-elif type(x) == type(5) or type(x) == type(5.5):
+elif type(x) is type(5) or type(x) is type(5.5):
     print("x is a valid number")
 
 else:
     print("X is not a valid number")
     x = 1
 
-print(100/x)
-
+print(100 / x)
 
 x = 5
 
@@ -90,8 +88,7 @@ else:
     print("X is not a valid number")
     x = 1
 
-print(100/x)
-
+print(100 / x)
 
 x = [2, 4]
 
@@ -99,16 +96,17 @@ if x == 0:
     x = 1
     print("x was equal to 0")
 
-elif type(x) == type(5) or type(x) == type(5.5):
+elif type(x is 5) or type(x is 5.5):
     print("x is a valid number")
 
 else:
     print("X is not a valid number")
     x = 1
 
-print(100/x)
+print(100 / x)
 
 ...
+# Cycles (loops)
 
 x = 0
 
@@ -119,15 +117,15 @@ while x < 5:
 else:
     print(x)
 
-
 x = int(input())
 
 count = 0
 y = 1
 
+# Factorial cycle
 while count < x:
-    count += 1
-    y *= count
+    count = count + 1
+    y = count * y
 
 else:
     print(y)
@@ -141,7 +139,6 @@ while len(x) < 5:
 
 else:
     print(x)
-
 
 x = ""
 
@@ -171,8 +168,7 @@ else:
 
 print(" Program is continue to work")
 
-
-x = "qwertyuiopasdfghjklzxcvbnm"
+x = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 y = input("Enter the string:\n")
 
 for i in x:
@@ -183,22 +179,16 @@ for i in x:
     if count > 0:
         print("Letters", i, "Were", count)
 
-
 for x in range(10):
     print(x)
-
 
 for x in range(5, 10):
     print(x)
 
-
 for x in range(5, 10, 2):
     print(x)
-
 
 for x in range(10, -10, -2):
     print(x)
 
 ...
-
-

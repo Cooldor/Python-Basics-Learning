@@ -15,6 +15,8 @@ print("Cooldor\nGSS")
 print("Cooldor\"GSS")
 print("Cooldor\GSS")
 
+# String Methods
+
 phrase = "Cooldor GSS"
 print(phrase + " is MVP")
 

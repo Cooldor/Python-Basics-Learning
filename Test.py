@@ -1,6 +1,11 @@
 import os
 import time
 
+os.system("open https://www.youtube.com/")
+
+time.sleep(5)
+
+
 for i in os.walk("/Users/air/Desktop/все/ONIX/Каталог ONIX 2018 новый (весна)"):
     print(i)
     break
@@ -8,9 +13,9 @@ for i in os.walk("/Users/air/Desktop/все/ONIX/Каталог ONIX 2018 нов
 
 lists = []
 
-for adress, dirs, files in os.walk("/Users/air/Desktop/все/ONIX/Каталог ONIX 2018 новый (весна)"):
+for address, dirs, files in os.walk("/Users/air/Desktop/все/ONIX/Каталог ONIX 2018 новый (весна)"):
     for file in files:
-        lists.append(os.path.join(adress, file))
+        lists.append(os.path.join(address, file))
 print(lists)
 
 

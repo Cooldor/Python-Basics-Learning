@@ -1,11 +1,4 @@
 print("Lists")
-if __name__ == "__main__":
-
-    def some_function():
-        print("Main module")
-
-
-some_function()
 
 Food = ["Potatoes", "Mushrooms", "Beef"]
 print(Food)
@@ -126,13 +119,18 @@ for i in n:
 else:
     print(m)
 
-
-x = [9, 8, 7, 6, 5]
-x.append(4)
-x.insert(1, 7)
-x.clear()
-x.extend(["a", "b"])
-h = x.copy()
+# Lists methods
+x = [9, 8, 7, 6, 5, 8]
+x.append(4)             # adds element in the end of list
+x.count(8)              # shows how many same elements in the list
+x.reverse()             # flips the list
+x.sort()                # sorts the list  in ascending order
+x.pop(0)                # deletes element according to the specified index and can save it in the variable
+x.remove(8)             # deletes specific element
+x.insert(1, 7)          # adds element at the specified index in the list
+x.clear()               # clears the list
+x.extend(["a", "b"])    # extends in the end of list another list values
+h = x.copy()            # copies list in the variable
 print(x)
 print(h)
 
@@ -184,7 +182,7 @@ else:
     print(m)
 print(b)
 
-# синтаксис срезов [start:stop:step]
+# syntax of slices [start:stop:step]
 
 
 n = list(range(1, 21))
@@ -230,7 +228,7 @@ print(b)
 
 
 n = list(range(1, 21))
-b = n[5:]
+b = n[:5]
 m = []
 for i in n:
     if i % 2 == 0:
@@ -301,39 +299,35 @@ print(x[1:5])
 
 x = (9, 8, 7, 6, 5, 4, 3)
 y = []
-
+# possible for tuples
 for i in range(len(x)):
     y.append(x[i] + 3)
 print(x)
 print(y)
 
-
+# how to change the tuple
 t = list(x)
 t[0] = 10
 x = tuple(t)
 print(x)
-#  z, c, b = x
 
-r = 5
-u = 7
-
-r, u = u, r
-
-print(x[1:5])
+# Tuples methods
 
 x = (9, 8, 7, 6, 5, 4, 3, 9, 9)
-print(x.count(9))
+print(x.count(9))                   # shows how many same elements in the tuple
 
 x = (9, 8, 7, 6, 5, 4, 3)
-print(x.index(9))
+print(x.index(9))                   # shows index of the element in the tuple
 
+# It's possible to add in one tuple another one
 h = (1, 2, 3)
 h += (4, 5)
 print(h)
 
 
 h = (1, 2, 3)
-h += (4, 5)
 g = h
+h += (4, 5)
+
 print(h)
 print(g)
