@@ -127,7 +127,7 @@ print(count_list(k))
 print(count_list("string"))
 
 
-def count_list(par, count=0):  # count is default parameter because this variable already has the value
+def count_list(par, count=0):  # count is default (named) parameter because this variable already has the value
 
     for _ in par:
         count += 1             # the amount of parameters and the amount of arguments must always match (be same)

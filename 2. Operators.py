@@ -107,10 +107,11 @@ print(100 / x)
 
 ...
 # Cycles (loops)
+# While and for loops have same (else:) default operator
 
-x = 0
+x = 0               # loop while works as long as condition TRUE
 
-while x < 5:
+while x < 5:        # If there is no condition it can run indefinitely (this MUST be avoided)
     x += 1
     print(x)
 
@@ -158,8 +159,8 @@ else:
 print("Program is continue to work")
 
 m = "string or Article"
-count = 0
-for I in m:
+count = 0     # for loop (I) - variable in which specifies the element of sequence
+for I in m:   # and in (m) variable the sequence we want to iterate
     if I == "t":
         print("Letter t is in the string")
         count += 1
@@ -178,10 +179,12 @@ for i in x:
     for r in y:                                                 # nested loop(cycle into the cycle)
         if i == r:
             count += 1
-    if count > 0:
+    if count > 0:         # without this (if) check in the end it will show ALL letters values from (x) variable
         print("Letters", i, "Were", count)
 
 ...
+
+# func range
 
 for x in range(10):
     print(x)
