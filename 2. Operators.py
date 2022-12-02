@@ -96,7 +96,7 @@ if x == 0:
     x = 1
     print("x was equal to 0")
 
-elif type(x is 5) or type(x is 5.5):
+elif type(x) == type(5) or type(x) == type(5.5):
     print("x is a valid number")
 
 else:
@@ -116,6 +116,8 @@ while x < 5:
 
 else:
     print(x)
+
+print(x)
 
 x = int(input())
 
@@ -155,35 +157,39 @@ else:
 
 print("Program is continue to work")
 
-m = "string or rticle"
+m = "string or Article"
 count = 0
 for I in m:
     if I == "t":
         print("Letter t is in the string")
         count += 1
     if I == "a":
-        break
+        break           # not breaking the program with capital "A" , clarification needed for capital letters
 else:
     print("Cycle completed, letters t", count)
 
 print(" Program is continue to work")
 
-x = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+x = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"      # letters counting program in the random string
 y = input("Enter the string:\n")
 
 for i in x:
     count = 0
-    for r in y:
+    for r in y:                                                 # nested loop(cycle into the cycle)
         if i == r:
             count += 1
     if count > 0:
         print("Letters", i, "Were", count)
+
+...
 
 for x in range(10):
     print(x)
 
 for x in range(5, 10):
     print(x)
+
+# steps
 
 for x in range(5, 10, 2):
     print(x)
