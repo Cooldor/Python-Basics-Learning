@@ -3,7 +3,7 @@ import os
 CurDir = os.getcwd()
 print(CurDir)
 
-print("helpos")
+# help.os for info
 
 
 cmd = "date"
@@ -30,7 +30,7 @@ while True:
         print("else")
 
 
-# Another Factorial cycle
+# Another Factorial cycle (loop)
 while True:
     x = int(input("Enter your number:\n"))
     if x == -1:
