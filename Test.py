@@ -74,9 +74,9 @@ r.close()
 # y = open("copy e.exe", "wb")   # create(w) the file in binary mode "b",because we can not work with binary code itself
 
 # while True:
-    # var = r.read(1048576)   1 MB form bytes
-    # print(var.__sizeof__())
-    # if var.__sizeof__() == 17:
+    # var = r.read(1048576)             #1 MB form bytes
+    # print(var.__sizeof__())   # method __sizeof__ shows how many size in RAM takes specific object
+    # if var.__sizeof__() == 17:        # security check to end the infinity cycle(loop)
         # break
     # y.write(var)
 
@@ -84,13 +84,20 @@ r.close()
 # r.close()
 # y.close()
 
+r = open("/Users/air/Desktop/text.txt2", "w")       # encoding peculiarities
+print(r)
+r.close()
 
+# possible errors when transferring data between different operating systems (encodings errors)
+# my encoding = "UTF-8"
 
+r = open("/Users/air/Desktop/text.txt2", "w", encoding="utf-16")
+r.write("Hello user!")
+r.close()
 
-
-
-
-
+h = open("/Users/air/Desktop/text.txt2", encoding="utf-16")
+print(h.read())
+r.close()
 
 
 
