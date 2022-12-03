@@ -70,8 +70,8 @@ r.close()
 
 # for binary files working
 
-# r = open("e.exe", "rb")
-# y = open("copy e.exe", "wb")
+# r = open("e.exe", "rb")        # read(r) "b" means read in binary mode
+# y = open("copy e.exe", "wb")   # create(w) the file in binary mode "b",because we can not work with binary code itself
 
 # while True:
     # var = r.read(1048576)   1 MB form bytes
