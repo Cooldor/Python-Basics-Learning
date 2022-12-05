@@ -46,7 +46,7 @@ while True:
         print(y)
 
 
-print("103 1224 875 / 03.11.22 ")
+print("103 1224 875 / 03.11.22 , 240 11 4 / 05.12.22")
 print("end of program")
 
 

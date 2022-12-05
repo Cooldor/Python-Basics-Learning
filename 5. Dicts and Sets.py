@@ -43,18 +43,18 @@ users = {
     }
 
 
-# def buy():
-#    pay = 0
-#    while True:
-#        enter = input("What to buy?\n")
-#        if enter == "end":
-#            break
-#        pay += price[enter]
-#    return pay
+def buy():
+    pay = 0
+    while True:
+        enter = input("What to buy?\n")
+        if enter == "end":
+            break
+        pay += price[enter]
+    return pay
 
 
 print(users["Alex7"]["password"])
-# print(buy())
+print(buy())
 
 
 price = {"meat": 3, "bread": 1, "potato": 0.5, "water": 0.2}

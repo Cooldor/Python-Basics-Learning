@@ -89,13 +89,13 @@ print(r)
 r.close()
 
 # possible errors when transferring data between different operating systems (encodings errors)
-# my encoding = "UTF-8"
+# my encoding = "utf-16"
 
-r = open("/Users/air/Desktop/text.txt2", "w", encoding="utf-16")
+r = open("/Users/air/Desktop/text.txt2", "w", encoding="utf-8")
 r.write("Hello user!")
 r.close()
 
-h = open("/Users/air/Desktop/text.txt2", encoding="utf-16")
+h = open("/Users/air/Desktop/text.txt2", encoding="utf-8")
 print(h.read())
 r.close()
 
