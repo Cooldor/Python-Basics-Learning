@@ -115,7 +115,7 @@ while x < 5:        # If there is no condition it can run indefinitely (this MUS
     x += 1
     print(x)
 
-else:
+else:        # else operator is not required (not must have) in the loop, it is executed after the loop is completed
     print(x)
 
 print(x)

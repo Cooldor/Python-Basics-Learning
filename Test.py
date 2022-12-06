@@ -47,7 +47,7 @@ print(lists)
 
 r = open("/Users/air/Desktop/text.txt", "w")
 r.write("Hello user")                   # created a txt file + wrote there "hello user"
-r.close()
+r.close()                               # safely close
 
 
 r = open("/Users/air/Desktop/text.txt")
