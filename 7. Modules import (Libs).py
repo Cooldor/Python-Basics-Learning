@@ -59,6 +59,6 @@ print(r)                     # for sorting needed the name of the list(variable)
 r = sorted(list_of, key=lambda x: x[1])   # lambda takes less place
 print(r)
 
-x = list(filter(lambda x: x[1] > 18, list_of))  # function filter used to create a new list by excluding some values
+x = list(filter(lambda x: x[1] > 18, list_of))  # function (filter) used to create a new list by excluding some values
 print(x)  # it checks the condition of boolean value in the first parameter(True or False), second is a list for check
 
