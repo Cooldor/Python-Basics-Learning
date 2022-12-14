@@ -60,10 +60,13 @@ print(type(g))
 g = [x for x in h if x % 2 == 0 and x > 0]
 print(g)
 
-g = [os.path.join(z, i) for z, x, c in os.walk('/Users/air/Desktop') for i in c  # nested loop in generator
+# nested loop in generator:
+
+g = [os.path.join(z, i) for z, x, c in os.walk('/Users/air/Desktop/PycharmProjects') for i in c
      if '.txt in i']  # it is possible to move generator syntax to the next line
 print(len(g))
 print(g)
+print(g.__sizeof__())
 
 # One more example with generator for  selected loop
 
@@ -79,7 +82,72 @@ print(generator_style)
 
 # Generator expression
 
+h = ['https:\\www.website.com', 'https:\\www.another_website.net',
+     'https:\\www.this_website.com',
+     'https:\\www.other_website.com',
+     'https:\\www.mini_website.net', 'https:\\www.hidden_website.com']
+
+n = [x.split('\\')[1] for x in h if '.com' in x]  # generator of list
+print(n)
+print(type(n))
+print(n[1])
+
+z = (x.split('\\')[1] for x in h if '.com' in x)      # generator expression
+print(type(z))
+print(z)                            # generate only one result (one element) per call unlike the list generator
+# print(n[1])                       # will be error because there is no indexes in generator expressions
+print(next(z))                      # (next) function shows what is the next element of iteration
+print(next(z))
+for i in z:
+    print(i)
+
+n = [x for x in os.walk('/Users/air/Desktop/Test Folder')]
+print(n)
+print(n.__sizeof__())
+print("It was the list generator")
 
 
+z = (x for x in os.walk('/Users/air/Desktop/Test Folder'))
+print(next(z))
+print(z.__sizeof__())
+print("And that was the generator expression")
+
+# generator function
+
+# example of some specific function without generator function:
 
 
+def some():
+    list_text = []
+    with open('text.txt', encoding='utf-8') as r:
+        for x in r:
+            list_text.append(x)
+    return list_text
+
+
+for i in some():
+    print(i.split())
+
+# Example of the same function but with generator function
+
+
+def some_generator():
+    with open('text.txt', encoding='utf-8') as a:
+        for x in a:
+            yield x         # operator (yield) works not same as (return), now it is the generator function
+
+
+# this generator function saves more computer power than previous function
+for i in some_generator():  # generator function will return one element for each iteration in this loop,
+    print(i.split())          # while previous simple function returns all elements into the new list
+# Result is the same
+
+
+# one more example:
+
+p = some_generator()         # same as generator expression
+print(next(p))
+print(next(p))
+print(next(p))
+for i in p:
+    print(i)

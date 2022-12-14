@@ -161,6 +161,19 @@ h, p = count_list(j, True)              # saved as variables
 print(h)
 print(p)
 
+# recursion function is a function that calls itself:
+
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+print(factorial(input("Enter the number for factorial function: \n")))
+
+
 # parameter args (asterisk (*)) allows to pass a variable number(more than one) of arguments to a function
 # for this parameter allows you to pack arguments into a tuple
 
@@ -362,4 +375,5 @@ def num2():
 
 num2()
 num1()
+
 
