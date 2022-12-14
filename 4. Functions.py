@@ -308,3 +308,58 @@ def weight(g):
 print("Weight of the cylinder (kg): ", weight(volume()))
 # function (volume) is an argument to weight function ((g) parameter)
 # that starts a chain of other functions work
+
+# decorators (design pattern)
+# decorators can be used when need to change functionality of the function (modify the code)
+# without intervening directly in the function itself
+# often used in large projects where so many functions
+
+
+def decorator(func):    # decorated function runs as argument to (parameter (func)) decorator function
+    def wrapper():   # nested function wrapper needed to avoid an error in decorated function when it runs by its name
+        print("Code of decorator")
+        func()              # call of decorated function start by random parameter in decorator function
+        print("Decorator code after call of decorated function")
+    return wrapper          # function_to_be_used = wrapper(function_to_be_used) now error will not occur
+
+
+@decorator  # function_to_be_used = decorator(function_to_be_used)(!) - that is why error occurs (for 319th str comment)
+def function_to_be_used():
+    enter = input("Enter something: ")
+    print(enter)
+
+
+print("Here")
+h = function_to_be_used
+h()
+
+# more examples:
+# decorator function will do some error processing for decorated functions
+
+
+def decor(f):
+    def wrapper2():
+        try:
+            tik = f()               # parameter (f) saved as variable
+        except Exception:           # for possible error if input value will not be the number
+            print("repeat your input...")
+            tik = f()
+        return tik
+    return wrapper2
+
+
+@decor
+def num1():
+    enter = float(input("Enter your number: "))
+    return enter
+
+
+@decor
+def num2():
+    enter = float(input("Enter your number again: "))
+    return enter
+
+
+num2()
+num1()
+

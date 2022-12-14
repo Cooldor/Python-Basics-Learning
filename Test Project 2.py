@@ -3,7 +3,7 @@ import os
 CurDir = os.getcwd()
 print(CurDir)
 
-# help.os for info
+# os.help for info
 
 
 cmd = "date"

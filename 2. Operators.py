@@ -171,12 +171,27 @@ else:
 
 print(" Program is continue to work")
 
+
+number_grid = [             # nested loop + 2D-list
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]
+print(number_grid[0])
+print(number_grid[2][2])
+
+for row in number_grid:
+    # print(row) / will print 4  elements (lists) nested into one big list
+    for col in row:
+        print(col)
+
 x = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"      # letters counting program in the random string
 y = input("Enter the string:\n")
 
 for i in x:
     count = 0
-    for r in y:                                                 # nested loop(cycle into the cycle)
+    for r in y:                                                 # nested loop
         if i == r:
             count += 1
     if count > 0:         # without this (if) check in the end it will show ALL letters values from (x) variable

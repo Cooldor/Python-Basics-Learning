@@ -1,4 +1,4 @@
-
+import os
 # if user will enter not a number, but a letter, words, strings, etc for (enter) variable - error is inevitable
 # using error processing operators to prevent an error from occurring
 # also using while loop to repeat the loop until the user enters a suitable value
@@ -30,4 +30,56 @@ with open("/Users/air/Desktop/ErrorTest.txt", "a") as r:   # (with) function (op
     r.write("something23")
 
 print("continue to work")
+
+
+# Generators of lists, dicts and sets
+# the task to create new a list based on some other list
+# using knowledge from past files its possible to do with (for) loop,
+# but there is a way to make it easier with list generator
+# example with (for) loop:
+
+h = [9, 8, 7, 4, 5, 6, 3, 2, 1, 5, 5, -2]
+new_h = []
+for x in h:
+    # if x % 2 == 0:      # that is how it looks like in loop (additional condition) for string 56
+    new_h.append(x*2)
+print(new_h)
+
+# example with list, set, dict  generators
+new_h2 = [x*2 for x in h]
+z = {x*2 for x in h}
+f = {x: x*2 for x in h}
+print(new_h2)           # take up less space and works faster
+print(z)
+print(f)
+
+g = [x for x in h if x % 2 == 0]       # how to write additional condition to generator
+print(g)
+print(type(g))
+
+g = [x for x in h if x % 2 == 0 and x > 0]
+print(g)
+
+g = [os.path.join(z, i) for z, x, c in os.walk('/Users/air/Desktop') for i in c  # nested loop in generator
+     if '.txt in i']  # it is possible to move generator syntax to the next line
+print(len(g))
+print(g)
+
+# One more example with generator for  selected loop
+
+price = {"meat": 3, "bread": 1, "potato": 0.5, "water": 0.2}
+
+new_price = {}
+for i in price.keys():
+    new_price[i] = round(price[i] * 0.85, 2)
+print(new_price)
+
+generator_style = {i: round(price[i] * 0.85, 2) for i in price.keys()}
+print(generator_style)
+
+# Generator expression
+
+
+
+
 

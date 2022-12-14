@@ -19,3 +19,5 @@ print(testlib.k)  # same , but for (import testlib), because importing the modul
 k = 12
 print(k)
 print(testlib.k)                        # did not change
+print(testlib.__name__)                 # used __main__ module in testlib to not accept input function from this module
+# for more info look into the testlib module
